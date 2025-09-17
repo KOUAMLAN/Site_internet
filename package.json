@@ -1,7 +1,7 @@
 {
   "name": "site-professeur-frontend",
   "version": "1.0.0",
-  "homepage": "https://VotreNomUtilisateur.github.io/Site_internet/",
+  "homepage": "https://kouamlan.github.io/KOUAMLAN-Site_internet/",
   "scripts": {
     "start": "vite",
     "dev": "vite --host",
