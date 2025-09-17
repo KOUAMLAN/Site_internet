@@ -1,0 +1,46 @@
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+
+import Accueil from './pages/Accueil.jsx';
+import Offre from './pages/Offre.jsx';
+import Contact from './pages/Contact.jsx';
+import FAQ from './pages/FAQ.jsx';
+import Cours from './pages/Cours.jsx';
+import Temoignages from './pages/Temoignages.jsx';
+import MentionsLegales from './pages/MentionsLegales.jsx';
+
+// Composant simple NotFound (page 404)
+function NotFound() {
+  return (
+    <section style={{ padding: '2rem', textAlign: 'center' }}>
+      <h1>404 - Page non trouvée</h1>
+      <p>La page que vous cherchez n'existe pas.</p>
+      <a href="#/" style={{ color: '#007bff', textDecoration: 'underline' }}>Retour à l'accueil</a>
+    </section>
+  );
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <Header />
+      <main style={{ minHeight: "calc(100vh - 140px)", maxWidth: "1200px", margin: "0 auto", padding: "1rem" }}>
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/offre" element={<Offre />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/cours" element={<Cours />} />
+          <Route path="/temoignages" element={<Temoignages />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          {/* Route catchall pour 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </HashRouter>
+  );
+}

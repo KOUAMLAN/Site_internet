@@ -1,0 +1,12 @@
+/* src/components/Footer.css */
+
+.site-footer {
+  background-color: #ECECEC;
+  color: #2B2E38;
+  text-align: center;
+  padding: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+  margin-top: 3rem;
+}

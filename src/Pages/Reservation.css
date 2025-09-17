@@ -1,0 +1,55 @@
+.reservation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 1rem;
+}
+
+.reservation-section form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reservation-section input,
+.reservation-section button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.reservation-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.reservation-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reservation-section button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.reservation-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+.reservation-error {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: red;
+}
