@@ -4,12 +4,12 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 
-import Accueil from './pages/Accueil.jsx';
+import Accueil from './Pages/Accueil.jsx';
 import Offre from './pages/Offre.jsx';
 import Contact from './pages/Contact.jsx';
-import FAQ from './pages/FAQ.jsx';
-import Cours from './pages/Cours.jsx';
-import Temoignages from './pages/Temoignages.jsx';
+import FAQ from './Pages/FAQ.jsx';
+import Cours from './Pages/Cours.jsx';
+import Temoignages from './Pages/Temoignages.jsx';
 import MentionsLegales from './pages/MentionsLegales.jsx';
 
 // Composant simple NotFound (page 404)
