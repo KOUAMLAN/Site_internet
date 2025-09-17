@@ -12,7 +12,6 @@ import Cours from './Pages/Cours.jsx';
 import Temoignages from './Pages/Temoignages.jsx';
 import MentionsLegales from './Pages/MentionsLegales.jsx';
 
-// Composant simple NotFound (page 404)
 function NotFound() {
   return (
     <section style={{ padding: '2rem', textAlign: 'center' }}>
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/cours" element={<Cours />} />
           <Route path="/temoignages" element={<Temoignages />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
-          {/* Route catchall pour 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
