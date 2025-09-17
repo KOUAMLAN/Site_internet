@@ -10,7 +10,7 @@ import Contact from './Pages/Contact.jsx';
 import FAQ from './Pages/FAQ.jsx';
 import Cours from './Pages/Cours.jsx';
 import Temoignages from './Pages/Temoignages.jsx';
-import MentionsLegales from './pages/MentionsLegales.jsx';
+import MentionsLegales from './Pages/MentionsLegales.jsx';
 
 // Composant simple NotFound (page 404)
 function NotFound() {
