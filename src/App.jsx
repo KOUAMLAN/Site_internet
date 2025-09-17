@@ -5,8 +5,8 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 
 import Accueil from './Pages/Accueil.jsx';
-import Offre from './pages/Offre.jsx';
-import Contact from './pages/Contact.jsx';
+import Offre from './Pages/Offre.jsx';
+import Contact from './Pages/Contact.jsx';
 import FAQ from './Pages/FAQ.jsx';
 import Cours from './Pages/Cours.jsx';
 import Temoignages from './Pages/Temoignages.jsx';
