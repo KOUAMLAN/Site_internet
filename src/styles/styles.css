@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 
+
 /* Variables design Canva */
 :root {
   --main-bg: #F8FBFF;
@@ -18,12 +19,14 @@
   --font-body: 'Roboto', Arial, sans-serif;
 }
 
+
 /* Reset marges et paddings */
 body, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
+
 
 /* Style global du body */
 body {
@@ -35,6 +38,7 @@ body {
   scroll-behavior: smooth;
 }
 
+
 /* Titres */
 h1, h2, h3 {
   font-family: var(--font-title);
@@ -42,6 +46,7 @@ h1, h2, h3 {
   margin-bottom: 1rem;
   font-weight: 700;
 }
+
 
 /* Liens */
 a {
@@ -54,6 +59,7 @@ a:focus {
   color: var(--main-accent);
 }
 
+
 /* Wrapper général */
 #site-wrapper {
   position: relative;
@@ -61,6 +67,7 @@ a:focus {
   background-color: #fff;
   z-index: 1;
 }
+
 
 /* Header sans image de fond */
 header {
@@ -77,10 +84,12 @@ header {
   z-index: 0;
 }
 
+
 /* Supprimer voile sombre */
 header::before {
   content: none !important;
 }
+
 
 /* Bannière image avec arrondi en haut seulement */
 .banner img.image-banner {
@@ -94,6 +103,7 @@ header::before {
   z-index: 1;
 }
 
+
 /* Sections, arrondi en bas seulement */
 section {
   padding: 40px 20px;
@@ -105,6 +115,7 @@ section {
   box-shadow: var(--shadow);
 }
 
+
 /* Sections Cours et Témoignages */
 .cours-section, .temoignages-section {
   background: #f8faff;
@@ -112,6 +123,7 @@ section {
   margin-bottom: var(--section-gap);
   text-align: center;
 }
+
 
 /* Sticky header menu */
 .site-header {
@@ -125,12 +137,14 @@ section {
   z-index: 1000;
 }
 
+
 /* Navigation */
 .site-header nav {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
+
 
 /* Liens navigation */
 .site-header nav a {
@@ -150,6 +164,7 @@ section {
   outline: none;
 }
 
+
 /* Espace padding top pour éviter chevauchement menu/contenu */
 main {
   padding-top: 60px;
@@ -157,6 +172,7 @@ main {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
 
 /* Boutons */
 .section-btn {
@@ -174,6 +190,7 @@ main {
 .section-btn:hover {
   background: var(--main-accent);
 }
+
 
 /* Footer */
 .site-footer {
@@ -195,6 +212,7 @@ main {
   color: var(--main-accent);
 }
 
+
 /* FAQ & Contact */
 #faq, #contact {
   display: flex;
@@ -206,6 +224,7 @@ main {
   text-align: center;
 }
 
+
 /* Abonnement */
 #abonnement {
   min-height: 100vh;
@@ -216,6 +235,7 @@ main {
   padding: 40px 20px;
   box-sizing: border-box;
 }
+
 
 /* Responsive */
 @media (max-width: 1200px) {

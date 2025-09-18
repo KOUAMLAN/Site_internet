@@ -25,36 +25,38 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
   font-weight: normal;
 }
 
-/* Style global du body */
-body {
+/* Flexbox layout global pour sticky footer */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: var(--main-bg);
   font-family: var(--font-body);
   color: var(--text);
   line-height: 1.65;
-  min-height: 100vh;
   scroll-behavior: smooth;
 }
 
-/* Bannière section */
-.banner {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  border-radius: var(--rounded);
-  overflow: hidden;
-  margin: 0 auto; /* centrage */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1;
 }
 
-/* Image bannière */
-.banner img.image-banner {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-  display: block;
+main {
+  flex: 1 0 auto;
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  background-color: var(--main-bg);
 }
 
-/* Sections containers */
+/* Sections */
 section {
   padding: 40px 20px;
   border-bottom: 1px solid #ccc;
@@ -66,92 +68,89 @@ section {
   text-align: center;
 }
 
-/* Classes pages spécifiques */
-.contact-page, .faq-page,
-.cours-page, .reservation-page,
-.abonnement-page, .offre-page,
-.temoignages-section {
-  max-width: 1344px;
+/* Bannière avec image */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: var(--rounded) var(--rounded) 0 0;
+  overflow: hidden;
   margin: 0 auto;
-  background-color: var(--main-bg);
-  min-height: 100vh;
-  font-family: var(--font-body);
-  padding: 2rem 3rem;
-  text-align: center;
 }
-
-/* Titres H1 et H2 uniformes */
-h1, h2 {
-  font-family: var(--font-title);
-  color: var(--main-blue);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Sticky header menu */
-.site-header {
-  background-color: var(--main-light);
-  border-bottom: 1px solid var(--main-grey);
-  padding: 1rem 2rem;
-  font-family: var(--font-title);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  position: sticky;
+.banner img.image-banner {
+  position: absolute;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--rounded) var(--rounded) 0 0;
+  z-index: 1;
 }
 
-/* Navigation */
-.site-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-/* Liens navigation */
-.site-header nav a {
-  color: var(--main-blue);
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
+/* FAQ */
+.faq-page {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2rem 3rem;
+  background-color: var(--main-bg);
+  box-shadow: var(--shadow);
   border-radius: var(--rounded);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  z-index: 1010;
-}
-.site-header nav a:hover,
-.site-header nav a:focus,
-.site-header nav a.active {
-  background-color: var(--main-accent);
-  color: var(--main-light);
-  outline: none;
+  font-family: var(--font-body);
+  color: var(--text);
 }
 
-/* Espace padding top pour éviter chevauchement contenu/menu */
-main {
-  padding-top: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Cours */
+.cours-page {
+  max-width: 700px;
+  margin: 2rem auto 3rem;
+  padding: 2rem 3rem;
+  font-family: var(--font-body);
+  color: var(--text);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Témoignages */
+.temoignages-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2rem 3rem;
+  background-color: var(--main-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded);
+  text-align: center;
+}
+
+/* Offres responsives en 2 colonnes */
+.offres-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.offre-item {
+  flex: 1 1 calc(50% - 1rem);
+  background-color: var(--main-light);
+  padding: 1rem;
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
+  text-align: center;
   box-sizing: border-box;
 }
 
-/* Boutons */
-.section-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
-  background: var(--main-blue);
-  color: #fff;
-  border-radius: 24px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: var(--shadow);
-  transition: background 0.2s;
-}
-.section-btn:hover {
-  background: var(--main-accent);
+@media (max-width: 600px) {
+  .offre-item {
+    flex: 1 1 100%;
+    padding: 1rem 0;
+  }
 }
 
-/* Footer */
+/* Footer sticky footer */
 .site-footer {
   background-color: var(--main-grey);
   color: var(--main-dark);
@@ -160,7 +159,8 @@ main {
   font-size: 0.95rem;
   font-family: var(--font-body);
   border-top: 1px solid #ccc;
-  margin-top: 40px;
+  margin-top: auto;
+  width: 100%;
 }
 .site-footer a {
   color: var(--main-blue);
@@ -169,48 +169,6 @@ main {
 }
 .site-footer a:hover {
   color: var(--main-accent);
-}
-
-/* Accordion styles */
-.accordion-item {
-  border-bottom: 1px solid #ddd;
-}
-.accordion-header {
-  cursor: pointer;
-  padding: 1rem;
-  width: 100%;
-  background: #f0f0f0;
-  border: none;
-  text-align: left;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.accordion-content {
-  padding: 1rem;
-  background: #fff;
-  animation: fadeIn 0.3s ease forwards;
-}
-.accordion-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.facebook-link {
-  margin-top: 12px;
-  font-size: 0.9rem;
-  text-align: right;
-}
-.facebook-link a {
-  color: #3b5998; /* couleur officielle Facebook */
-  text-decoration: underline;
-}
-.facebook-link a:hover {
-  color: #2d4373;
 }
 
 /* Responsive */
@@ -223,9 +181,7 @@ main {
 @media (max-width: 900px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.3rem; }
-  main {
-    max-width: 720px;
-  }
+  main { max-width: 720px; }
   nav { gap: 1rem; }
 }
 @media (max-width: 600px) {

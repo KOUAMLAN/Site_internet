@@ -1,12 +1,13 @@
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto 3rem;
+.section-container, .faq-page {
+  max-width: 900px;
+  margin: 0 auto 3rem; /* centrage horizontal et espace inférieur */
   padding: 2rem 3rem;
   background-color: var(--main-bg);
   box-shadow: var(--shadow);
   border-radius: var(--rounded);
   font-family: var(--font-body);
   color: var(--text);
+  box-sizing: border-box;
   text-align: center;
 }
 

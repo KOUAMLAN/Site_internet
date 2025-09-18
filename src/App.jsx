@@ -17,7 +17,9 @@ function NotFound() {
     <section style={{ padding: '2rem', textAlign: 'center' }}>
       <h1>404 - Page non trouvée</h1>
       <p>La page que vous cherchez n'existe pas.</p>
-      <a href="#/" style={{ color: '#007bff', textDecoration: 'underline' }}>Retour à l'accueil</a>
+      <a href="#/" style={{ color: '#007bff', textDecoration: 'underline' }}>
+        Retour à l'accueil
+      </a>
     </section>
   );
 }
@@ -25,20 +27,22 @@ function NotFound() {
 export default function App() {
   return (
     <HashRouter>
-      <Header />
-      <main style={{ minHeight: "calc(100vh - 140px)", maxWidth: "1200px", margin: "0 auto", padding: "1rem" }}>
-        <Routes>
-          <Route path="/" element={<Accueil />} />
-          <Route path="/offre" element={<Offre />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/cours" element={<Cours />} />
-          <Route path="/temoignages" element={<Temoignages />} />
-          <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
+      <div className="app-container">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/offre" element={<Offre />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/cours" element={<Cours />} />
+            <Route path="/temoignages" element={<Temoignages />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </HashRouter>
   );
 }
