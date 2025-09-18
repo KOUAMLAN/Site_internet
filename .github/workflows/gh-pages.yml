@@ -1,6 +1,5 @@
 name: Déploiement sur GitHub Pages
 
-# Déclenchement du workflow à chaque push sur main ou master, ou manuellement
 on:
   push:
     branches:
@@ -8,7 +7,6 @@ on:
       - master
   workflow_dispatch:
 
-# Permissions nécessaires pour déployer sur GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -29,11 +27,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Installer Node.js (version recommandée pour Vite)
+      # Installer Node.js (version recommandée pour Vite >= 7.x)
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20.19.0'
 
       # Installer les dépendances
       - name: Install dependencies
