@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -23,25 +23,20 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      # Récupérer le code source
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Installer Node.js (version recommandée pour Vite >= 7.x)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.19.0'
 
-      # Installer les dépendances
       - name: Install dependencies
         run: npm ci
 
-      # Build de l'application
       - name: Build
         run: npm run build
 
-      # Déployer le contenu du dossier dist sur la branche gh-pages
       - name: Deploy to GitHub Pages
         id: deploy
         uses: peaceiris/actions-gh-pages@v3
