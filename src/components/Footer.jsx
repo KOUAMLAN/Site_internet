@@ -14,7 +14,11 @@ export default function Footer() {
         </a>{" "}
         |{" "}
         <a
+<<<<<<< HEAD
           href="https://www.tiktok.com/@couabo"
+=======
+          href="https://www.tiktok.com/@votreprofil"
+>>>>>>> e063f3d81b6c87898eaab2128fb9f11b52623644
           target="_blank"
           rel="noopener noreferrer"
         >
