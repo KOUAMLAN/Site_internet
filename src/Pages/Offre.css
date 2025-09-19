@@ -1,0 +1,91 @@
+.offre-page {
+  padding: 2rem 3rem;
+  background-color: var(--main-bg);
+  min-height: 100vh;
+  max-width: 1344px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+.offre-page h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--main-blue);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.offres-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.offre-item {
+  background: var(--main-light);
+  border-radius: var(--rounded);
+  box-shadow: 0 6px 12px rgba(64, 103, 249, 0.15);
+  padding: 2rem;
+  max-width: 300px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.offre-item:hover {
+  box-shadow: 0 12px 24px rgba(64, 103, 249, 0.3);
+}
+
+.offre-item h2 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--main-dark);
+}
+
+.offre-item p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.btn-reserver {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--main-blue);
+  color: var(--main-light);
+  border: none;
+  border-radius: var(--rounded);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.btn-reserver:hover {
+  background-color: var(--main-accent);
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+  .offres-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .offre-item {
+    max-width: 100%;
+  }
+}

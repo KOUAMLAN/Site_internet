@@ -1,0 +1,214 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+/* Variables design Canva */
+:root {
+  --main-bg: #F8FBFF;
+  --main-blue: #4067F9;
+  --main-accent: #FF8E3C;
+  --main-dark: #2B2E38;
+  --main-light: #FFFFFF;
+  --main-grey: #ECECEC;
+  --text: #181A1F;
+  --rounded: 2rem;
+  --shadow: 0 4px 16px rgba(0,0,0,0.07);
+  --section-gap: 48px;
+  --font-title: 'Montserrat', Arial, sans-serif;
+  --font-body: 'Roboto', Arial, sans-serif;
+}
+
+/* Reset marges et paddings */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Flexbox layout global pour sticky footer */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--main-bg);
+  font-family: var(--font-body);
+  color: var(--text);
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-top: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  background-color: var(--main-bg);
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #ccc;
+  min-height: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 var(--rounded) var(--rounded);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* Bannière avec image */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: var(--rounded) var(--rounded) 0 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.banner img.image-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--rounded) var(--rounded) 0 0;
+  z-index: 1;
+}
+
+/* FAQ */
+.faq-page {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2rem 3rem;
+  background-color: var(--main-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded);
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+/* Cours */
+.cours-page {
+  max-width: 700px;
+  margin: 2rem auto 3rem;
+  padding: 2rem 3rem;
+  font-family: var(--font-body);
+  color: var(--text);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Témoignages */
+.temoignages-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2rem 3rem;
+  background-color: var(--main-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded);
+  text-align: center;
+}
+
+/* Offres responsives en 2 colonnes */
+.offres-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.offre-item {
+  flex: 1 1 calc(50% - 1rem);
+  background-color: var(--main-light);
+  padding: 1rem;
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .offre-item {
+    flex: 1 1 100%;
+    padding: 1rem 0;
+  }
+}
+
+/* Footer sticky footer */
+.site-footer {
+  background-color: var(--main-grey);
+  color: var(--main-dark);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+  width: 100%;
+}
+.site-footer a {
+  color: var(--main-blue);
+  text-decoration: underline; /* Ajout soulignement pour contraste */
+  margin: 0 0.5rem;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--main-accent);
+  outline: 2px dashed var(--main-accent); /* Indicateur focus visible */
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  main {
+    max-width: 900px;
+    padding: 20px;
+  }
+}
+@media (max-width: 900px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.3rem; }
+  main { max-width: 720px; }
+  nav { gap: 1rem; }
+}
+@media (max-width: 600px) {
+  body { font-size: 1rem; }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+    color: var(--main-blue);
+    text-decoration: underline; /* Ajout soulignement */
+  }
+  nav a:hover,
+  nav a:focus {
+    color: var(--main-accent);
+    outline: 2px dashed var(--main-accent); /* Focus visible */
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 20px 10px;
+    min-height: 300px;
+  }
+}
