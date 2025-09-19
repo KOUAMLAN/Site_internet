@@ -22,6 +22,14 @@ export default function Footer() {
         </a>{" "}
         |{" "}
         <a
+          href="https://www.instagram.com/couaboa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>{" "}
+        |{" "}
+        <a
           href="https://www.youtube.com/channel/votrechannel"
           target="_blank"
           rel="noopener noreferrer"
