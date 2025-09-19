@@ -14,7 +14,7 @@ export default function Footer() {
         </a>{" "}
         |{" "}
         <a
-          href="https://www.tiktok.com/@votreprofil"
+          href="https://www.tiktok.com/@couabo"
           target="_blank"
           rel="noopener noreferrer"
         >
