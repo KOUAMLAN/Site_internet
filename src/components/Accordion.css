@@ -1,0 +1,41 @@
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  background: #f0f0f0;
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  padding: 1rem;
+  background: #fff;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.facebook-link {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.facebook-link a {
+  color: #3b5998; /* Couleur officielle Facebook */
+  text-decoration: underline;
+}
+
+.facebook-link a:hover {
+  color: #2d4373;
+}  

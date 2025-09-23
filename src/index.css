@@ -1,0 +1,116 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-bg);
+}
+
+.app-container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  background-color: var(--main-bg);
+  min-height: auto;
+}
+
+/* Footer sticky en bas */
+.site-footer {
+  margin-top: auto;
+  background-color: #ECECEC;
+  color: #2B2E38;
+  text-align: center;
+  padding: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Navigation responsive */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem;
+  background-color: #f8faff;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--main-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: var(--rounded);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-links a.active {
+  color: var(--main-accent);
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: var(--main-accent);
+  color: var(--main-light);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    max-width: 900px;
+    padding: 20px;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+  main {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+  section {
+    padding: 20px 10px;
+    min-height: 300px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+}

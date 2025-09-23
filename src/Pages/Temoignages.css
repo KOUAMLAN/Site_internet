@@ -1,0 +1,72 @@
+:root {
+  --main-bg: #f9f9fb;
+  --main-blue: #4067f9;
+  --main-light: #e6f0ff;
+  --main-dark: #1e2a47;
+  --text: #333333;
+  --font-body: 'Arial, sans-serif';
+  --font-title: 'Arial Black, sans-serif';
+  --rounded: 10px;
+}
+
+.temoignage-item {
+  background: var(--main-light);
+  border-radius: var(--rounded);
+  box-shadow: 0 6px 12px rgba(64, 103, 249, 0.15);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.temoignage-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--main-dark);
+  margin-bottom: 0.5rem;
+}
+
+.temoignage-content {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.temoignage-facebook {
+  color: var(--main-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.temoignage-facebook:hover {
+  text-decoration: underline;
+}
+
+.bilans-title {
+  margin-top: 2rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--main-dark);
+}
+
+.bilans-info {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--main-dark);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .temoignage-item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .temoignage-item {
+    padding: 0.75rem;
+  }
+}

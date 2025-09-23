@@ -1,0 +1,44 @@
+.nav-links {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne si beaucoup de liens */
+  gap: 10px;
+  justify-content: center;
+  background-color: #f8faff;
+  padding: 1rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4067f9;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: #ff8e3c;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.nav-links a:hover:not(.active) {
+  color: #6791ff;
+  background-color: #e6ecfe;
+}
+
+/* Styles mobiles */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column; /* Liens empilés verticalement */
+    align-items: center;
+  }
+
+  .nav-links a {
+    width: 100%; /* Liens prennent toute la largeur */
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}

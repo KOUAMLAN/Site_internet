@@ -1,0 +1,68 @@
+/* Footer */
+.site-footer {
+  background-color: var(--main-grey, #ECECEC);
+  color: var(--main-dark, #2B2E38);
+  text-align: center;
+  padding: 1.5rem 3rem;
+  font-family: var(--font-body, 'Roboto', sans-serif);
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Layout global en flex pour footer sticky */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--main-bg);
+  font-family: var(--font-body);
+  color: var(--text);
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  background-color: var(--main-bg);
+  min-height: calc(100vh - 140px);
+  position: relative;
+}
+
+/* Responsive footer */
+@media (max-width: 1024px) {
+  .site-footer {
+    padding: 1.25rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+  }
+}
