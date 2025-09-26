@@ -10,12 +10,16 @@ export default function FormContact() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <label htmlFor="name">Nom :</label>
+      <input type="text" id="name" name="name" required />
+      <ValidationError prefix="Nom" field="name" errors={state.errors} />
+
       <label htmlFor="email">Email :</label>
-      <input id="email" type="email" name="email" required />
+      <input type="email" id="email" name="email" required />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
 
       <label htmlFor="message">Message :</label>
-      <textarea id="message" name="message" required />
+      <textarea id="message" name="message" rows="4" required></textarea>
       <ValidationError prefix="Message" field="message" errors={state.errors} />
 
       <button type="submit" disabled={state.submitting}>Envoyer</button>
